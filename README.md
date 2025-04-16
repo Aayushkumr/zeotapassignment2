@@ -1,5 +1,4 @@
-
-## 1. Improve Title and Introduction
+## 1. Introduction
 
 ```markdown
 # ClickHouse Flat File Tool
@@ -70,10 +69,6 @@ Built with a React frontend and Node.js/Express backend, the tool provides an in
 - **Authentication**: JWT token generation and validation
 - **API Structure**: RESTful endpoints with controller-service pattern
 
-### System Diagram
-```
-![System Diagram](screenshots/system-diagram.png)
-```
 ```
 
 ## 4. Add Screenshots and Usage Examples
@@ -182,13 +177,6 @@ cd client
 npm test
 ```
 
-### Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 ```
 
 ## 6. Add Troubleshooting Section
@@ -251,21 +239,3 @@ UPLOAD_TEMP_DIR=./uploads
 MAX_FILE_SIZE=10485760  # 10MB in bytes
 ```
 ```
-
-## Final Recommendations
-
-1. **Add real screenshots** of your application in action
-2. **Create a system diagram** showing the data flow between components
-3. **Include a "Future Enhancements"** section to show what you would add with more time
-4. **Add attribution** for any third-party libraries or resources used
-5. **Update the license** section with appropriate information
-6. **Make sure all paths and instructions** are correct for your specific implementation
-
-These improvements will make your README much more comprehensive and professional, showcasing not just the functionality of your tool but also your attention to detail and documentation skills.## Final Recommendations
-
-1. **Add real screenshots** of your application in action
-2. **Create a system diagram** showing the data flow between components
-3. **Include a "Future Enhancements"** section to show what you would add with more time
-4. **Add attribution** for any third-party libraries or resources used
-5. **Update the license** section with appropriate information
-6. **Make sure all paths and instructions** are correct for your specific implementation
