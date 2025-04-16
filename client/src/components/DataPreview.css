@@ -1,0 +1,113 @@
+.data-preview {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-5);
+  margin-top: var(--spacing-5);
+}
+
+.data-preview h2 {
+  margin-bottom: var(--spacing-3);
+  color: var(--dark);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.data-preview-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-4);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: var(--spacing-4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.data-preview table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.data-preview th {
+  background-color: var(--gray-light);
+  padding: var(--spacing-2) var(--spacing-3);
+  text-align: left;
+  font-weight: var(--font-weight-semibold);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.data-preview td {
+  padding: var(--spacing-2) var(--spacing-3);
+  border-top: 1px solid var(--border-color);
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.data-preview tr:hover td {
+  background-color: rgba(52, 152, 219, 0.05);
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-4);
+}
+
+.pagination-controls button {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast) var(--easing);
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background-color: var(--gray-light);
+  border-color: var(--gray-dark);
+}
+
+.pagination-controls button:disabled {
+  color: var(--gray);
+  cursor: not-allowed;
+  border-color: var(--border-color);
+}
+
+.pagination-info {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.empty-data {
+  padding: var(--spacing-6) 0;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.empty-data svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--spacing-3);
+  color: var(--gray);
+}
+
+.empty-data-message {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-2);
+}
+
+.empty-data-submessage {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+}

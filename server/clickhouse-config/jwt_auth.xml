@@ -1,0 +1,29 @@
+<clickhouse>
+    <!-- Global JWT settings -->
+    <jwt_auth>
+        <secret>aayushkumarzeotap</secret>
+        <algorithm>HS256</algorithm>
+    </jwt_auth>
+    
+    <!-- User-specific JWT settings -->
+    <users>
+        <default>
+            <!-- Allow empty password as fallback -->
+            <password></password>
+            
+            <!-- Enable JWT for this user -->
+            <jwt>
+                <algorithm>HS256</algorithm>
+                <secret>aayushkumarzeotap</secret>
+                <username_claim>username</username_claim>
+            </jwt>
+            
+            <networks>
+                <ip>::/0</ip>
+            </networks>
+            
+            <profile>default</profile>
+            <quota>default</quota>
+        </default>
+    </users>
+</clickhouse>

@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    volumes:
+      - ./server/clickhouse-config:/etc/clickhouse-server/config.d
+      - clickhouse-data:/var/lib/clickhouse
+    environment:
+      - CLICKHOUSE_DB=default
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_JWT_SECRET=aayushkumarzeotap
+
+  api:
+    build:
+      context: ./server
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./server:/app
+      - ./uploads:/app/uploads
+    depends_on:
+      - clickhouse
+    environment:
+      - PORT=3001
+      - NODE_ENV=development
+      - CLICKHOUSE_HOST=clickhouse
+      - CLICKHOUSE_PORT=8123
+      - JWT_SECRET=aayushkumarzeotap
+      - JWT_EXPIRES_IN=1h
+
+  client:
+    build:
+      context: ./client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+    depends_on:
+      - api
+    environment:
+      - VITE_API_URL=http://localhost:3001
+
+volumes:
+  clickhouse-data:

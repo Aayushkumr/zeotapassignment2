@@ -1,0 +1,24 @@
+<!-- This file was generated automatically.
+     Do not edit it: it is likely to be discarded and generated again before it's read next time.
+     Files used to generate this file:
+       /Users/aayushkumar/Intern/Intern Assignment/ch_flatfile_tool/server/config.xml
+       /Users/aayushkumar/Intern/Intern Assignment/ch_flatfile_tool/server/config.d/jwt_auth.xml
+       /Users/aayushkumar/Intern/Intern Assignment/ch_flatfile_tool/server/preprocessed_configs/config.xml      -->
+
+<clickhouse>
+    <!-- Include the base configuration -->
+    <include_from>/Users/aayushkumar/Intern/Intern Assignment/ch_flatfile_tool/server/preprocessed_configs/config.xml</include_from>
+    
+    <!-- Add JWT authentication -->
+    <jwt_auth>
+        <secret>aayushkumarzeotap</secret>
+        <algorithm>HS256</algorithm>
+        <key_id_field>kid</key_id_field>
+    
+        
+        
+        
+    </jwt_auth>
+
+    
+</clickhouse>

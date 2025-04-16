@@ -1,0 +1,186 @@
+.connection-form {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-5);
+  margin-bottom: var(--spacing-5);
+}
+
+.connection-form h3 {
+  margin-bottom: var(--spacing-4);
+  color: var(--dark);
+}
+
+.connection-form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-4);
+}
+
+.connection-form .form-group {
+  margin-bottom: var(--spacing-3);
+}
+
+.connection-form .full-width {
+  grid-column: span 2;
+}
+
+/* Enhance form labels for better contrast and readability */
+.connection-form label {
+  display: block;
+  margin-bottom: var(--spacing-2);
+  font-weight: var(--font-weight-medium);
+  color: var(--dark); /* Darker color for better readability */
+  font-size: var(--font-size-base);
+}
+
+.connection-form input,
+.connection-form select,
+.connection-form textarea {
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  color: var(--text-primary); /* Add explicit text color */
+  background-color: white; /* Ensure background is white */
+  transition: border-color var(--transition-fast) var(--easing), 
+              box-shadow var(--transition-fast) var(--easing);
+}
+
+/* Ensure text in placeholders is visible */
+.connection-form input::placeholder,
+.connection-form textarea::placeholder {
+  color: var(--gray);
+  opacity: 0.7;
+}
+
+.connection-form input:focus,
+.connection-form select:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.connection-form textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: var(--spacing-3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  resize: vertical;
+}
+
+.auth-type-selector {
+  display: flex;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-3);
+}
+
+/* Fix auth-type selector labels */
+.auth-type-selector label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-primary); /* Ensure text color */
+}
+
+.auth-type-selector input {
+  margin-right: var(--spacing-2);
+  width: auto;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-3);
+}
+
+.checkbox-group input {
+  width: auto;
+  margin-right: var(--spacing-2);
+}
+
+.generated-token {
+  grid-column: span 2;
+  background-color: var(--gray-light);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-4);
+}
+
+.token-display {
+  background-color: white;
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  max-width: 100%;
+  font-family: monospace;
+  font-size: var(--font-size-sm);
+  margin: var(--spacing-2) 0;
+  color: var(--text-primary); /* Add explicit text color */
+  border: 1px solid var(--border-color);
+}
+
+.token-status {
+  margin-top: var(--spacing-2);
+  padding: var(--spacing-2);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-sm);
+}
+
+.token-status.valid {
+  color: var(--success);
+  background-color: var(--success-light);
+}
+
+.token-status.invalid {
+  color: var(--danger);
+  background-color: var(--danger-light);
+}
+
+.token-status.unknown {
+  color: var(--text-secondary);
+  background-color: var(--gray-light);
+}
+
+.connection-form .actions {
+  grid-column: span 2;
+  margin-top: var(--spacing-4);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+}
+
+.connection-form button {
+  padding: var(--spacing-2) var(--spacing-5);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+  transition: background-color var(--transition-fast) var(--easing);
+}
+
+.connection-form button:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+}
+
+.connection-form button:disabled {
+  background-color: var(--gray);
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .connection-form form {
+    grid-template-columns: 1fr;
+  }
+  
+  .connection-form .full-width,
+  .connection-form .generated-token {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,251 @@
+.export-page {
+  padding: 20px;
+}
+
+.export-page h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.steps-indicator {
+  display: flex;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.step {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  background-color: #e0e0e0;
+  color: #757575;
+  position: relative;
+}
+
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 30px;
+  height: 100%;
+  background-color: #e0e0e0;
+  transform: skew(-20deg);
+  z-index: 1;
+}
+
+.step.active {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.step.active:not(:last-child)::after {
+  background-color: #1a73e8;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #d32f2f;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border-left: 4px solid #d32f2f;
+}
+
+.step-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.connection-section {
+  margin-bottom: 30px;
+}
+
+.connection-section h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.table-selection {
+  margin-top: 20px;
+}
+
+.table-selection h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.tables-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.table-item {
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.table-item:hover {
+  background-color: #e0e0e0;
+}
+
+.table-item.selected {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.loading, .no-tables {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.table-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.export-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 150px;
+}
+
+.preview-section {
+  margin-top: 20px;
+}
+
+.preview-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.preview-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.back-btn, .export-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.back-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.back-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.export-btn {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.export-btn:hover {
+  background-color: #1557b0;
+}
+
+.export-btn:disabled, .back-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.success-message h2 {
+  color: #4caf50;
+  margin-bottom: 15px;
+}
+
+.success-message p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.file-info, .record-count {
+  margin: 10px 0;
+}
+
+.success-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.download-btn, .new-export-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.download-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.download-btn:hover {
+  background-color: #3d8b40;
+}
+
+.new-export-btn {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.new-export-btn:hover {
+  background-color: #1557b0;
+}

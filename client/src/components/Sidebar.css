@@ -1,0 +1,93 @@
+.sidebar {
+  width: 250px;
+  background-color: var(--dark);
+  color: var(--text-light);
+  transition: transform var(--transition-normal) var(--easing);
+  overflow-y: auto;
+  position: fixed;
+  top: 60px; /* Match the header height */
+  bottom: 0; /* Extend to the bottom of the viewport */
+  left: 0;
+  z-index: 90; /* Below header */
+  box-shadow: var(--shadow-md);
+  height: calc(100vh - 60px); /* Full height minus header */
+}
+
+.sidebar.closed {
+  transform: translateX(-250px);
+}
+
+/* Improve sidebar styling */
+.sidebar-header {
+  padding: var(--spacing-4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: var(--spacing-3);
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu a {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3) var(--spacing-4);
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: all var(--transition-fast) var(--easing);
+  border-left: 3px solid transparent;
+}
+
+.nav-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  border-left: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-menu a.active {
+  background-color: var(--primary); /* Use primary color instead of teal */
+  color: white;
+  border-left: 3px solid var(--primary-dark);
+}
+
+.nav-menu .icon {
+  margin-right: var(--spacing-3);
+  font-size: var(--font-size-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+}
+
+/* Add section dividers */
+.nav-section {
+  margin-top: var(--spacing-4);
+  padding-top: var(--spacing-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-section-title {
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: var(--font-weight-medium);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-250px);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}

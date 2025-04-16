@@ -1,0 +1,23 @@
+<clickhouse>
+    <users>
+        <default>
+            <!-- Empty password allows both password and JWT auth -->
+            <password></password>
+            
+            <!-- Add JWT authentication -->
+            <jwt>
+                <algorithm>HS256</algorithm>
+                <secret>aayushkumarzeotap</secret>
+                <username_claim>username</username_claim>
+            </jwt>
+            
+            <!-- Allow connections from anywhere -->
+            <networks>
+                <ip>::/0</ip>
+            </networks>
+            
+            <profile>default</profile>
+            <quota>default</quota>
+        </default>
+    </users>
+</clickhouse>

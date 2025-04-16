@@ -1,0 +1,5 @@
+"buyer_id","supplier_id","to_airport","from_airport","journey_type","pax","costprice","markup","selling_price","booking_date","payment_method","refund_status","refund_amount","channel_of_booking","booking_status","travel_date","cashback","coupon_redeem","Coupon_USed_","cancellation_rate","failure_rate"
+"345","6","DEL","DEN","one way","2","286.4728821","92.20224776","363.3080885","2024-03-01","Credit Card","Yes","249.8681239","Android","confirmed","2024-10-17","0","9.220224776","","0","0"
+"455","4","DEL","GOI","one way","5","612.7032936","325.2386549","883.735506","2024-03-01","PayPal","Yes","607.7963576","Android","confirmed","2024-03-02","0","0","","0","0"
+"302","3","BOM","MIA","round trip","1","328.3777432","79.07294625","394.2718651","2024-03-01","Bank Transfer","Yes","271.1637157","Android","confirmed","2024-10-02","3.942718651","7.907294625","","0","0"
+"492","3","BOM","ORD","round trip","5","189.8734864","53.65021107","234.5819956","2024-03-01","Credit Card","Yes","0","Android","confirmed","2024-07-17","2.345819956","0","","0","0"

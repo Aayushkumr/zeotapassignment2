@@ -1,0 +1,44 @@
+<clickhouse>
+    <!-- Network settings -->
+    <listen_host>0.0.0.0</listen_host>
+    <http_port>8123</http_port>
+    <tcp_port>9000</tcp_port>
+    <mysql_port>9004</mysql_port>
+    
+    <!-- Path settings - relative paths -->
+    <path>./clickhouse_data</path>
+    <tmp_path>./clickhouse_tmp</tmp_path>
+    <user_files_path>./clickhouse_user_files</user_files_path>
+    <user_scripts_path>./clickhouse_user_scripts</user_scripts_path>
+    
+    <!-- User configuration -->
+    <users>
+        <default>
+            <!-- Set a simple password for testing -->
+            <password>clickhouse</password>
+            
+            <networks>
+                <ip>::/0</ip>
+            </networks>
+            
+            <profile>default</profile>
+            <quota>default</quota>
+        </default>
+    </users>
+    
+    <!-- Define profiles -->
+    <profiles>
+        <default>
+            <max_memory_usage>10000000000</max_memory_usage>
+            <use_uncompressed_cache>0</use_uncompressed_cache>
+            <load_balancing>random</load_balancing>
+        </default>
+    </profiles>
+    
+    <!-- Define quotas -->
+    <quotas>
+        <default>
+            <!-- Default quota settings -->
+        </default>
+    </quotas>
+</clickhouse>

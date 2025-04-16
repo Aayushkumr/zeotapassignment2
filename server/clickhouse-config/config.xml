@@ -1,0 +1,17 @@
+<clickhouse>
+    <logger>
+        <level>trace</level>
+        <console>true</console>
+    </logger>
+
+    <http_port>8123</http_port>
+    <tcp_port>9000</tcp_port>
+    <mysql_port>9004</mysql_port>
+    
+    <listen_host>0.0.0.0</listen_host>
+    
+    <jwt_auth>
+        <secret_env_var>CLICKHOUSE_JWT_SECRET</secret_env_var>
+        <algorithm>HS256</algorithm>
+    </jwt_auth>
+</clickhouse>

@@ -1,0 +1,7 @@
+<clickhouse>
+    <jwt_auth>
+        <secret>aayushkumarzeotap</secret>
+        <algorithm>HS256</algorithm>
+        <key_id_field>kid</key_id_field>
+    </jwt_auth>
+</clickhouse>

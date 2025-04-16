@@ -1,0 +1,6 @@
+columns format version: 1
+4 columns:
+`supplier_id` String
+`from_airport` String
+`to_airport` String
+`journey_type` String

@@ -1,0 +1,270 @@
+/* Reset #root styles that might interfere with layout */
+#root {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Main application layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.app-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  margin-top: 60px; /* Add top margin equal to header height */
+}
+
+.content {
+  flex: 1;
+  padding: var(--spacing-5) var(--spacing-6);
+  overflow-y: auto;
+  transition: margin-left var(--transition-normal) var(--easing);
+  background-color: var(--light);
+  min-height: calc(100vh - 60px); /* Content min-height */
+}
+
+.content.with-sidebar {
+  margin-left: 250px; /* Match sidebar width */
+}
+
+/* Page title styling */
+.page-header {
+  margin-bottom: var(--spacing-6);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: var(--spacing-4);
+}
+
+.page-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--dark);
+  margin-bottom: var(--spacing-2);
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin-top: var(--spacing-1);
+}
+
+/* Card layouts */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-5);
+}
+
+.card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-5);
+  transition: transform var(--transition-normal) var(--easing), 
+              box-shadow var(--transition-normal) var(--easing);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-header {
+  padding-bottom: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-body {
+  margin-bottom: var(--spacing-4);
+}
+
+.card-footer {
+  padding-top: var(--spacing-3);
+  border-top: 1px solid var(--border-color);
+}
+
+/* Steps component for all multi-step processes */
+.steps-indicator {
+  display: flex;
+  margin: var(--spacing-5) 0;
+  padding: var(--spacing-3);
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.step {
+  flex: 1;
+  padding: var(--spacing-3);
+  text-align: center;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  position: relative;
+}
+
+.step.active {
+  color: var(--primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.step.completed {
+  color: var(--success);
+}
+
+.step.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+.step.completed::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--success);
+}
+
+/* Loading states */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-6);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(52, 152, 219, 0.2);
+  border-radius: 50%;
+  border-top-color: var(--primary);
+  animation: spin 1s linear infinite;
+  margin-bottom: var(--spacing-3);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error and success messaging */
+.error-message,
+.success-message,
+.info-message,
+.warning-message {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3) var(--spacing-4);
+  margin: var(--spacing-3) 0;
+  border-radius: var(--border-radius);
+}
+
+.error-message {
+  background-color: var(--danger-light);
+  border-left: 4px solid var(--danger);
+  color: #a12b2b;
+}
+
+.success-message {
+  background-color: var(--success-light);
+  border-left: 4px solid var(--success);
+  color: #0d6832;
+}
+
+.info-message {
+  background-color: rgba(52, 152, 219, 0.1);
+  border-left: 4px solid var(--info);
+  color: #2561a8;
+}
+
+.warning-message {
+  background-color: rgba(241, 196, 15, 0.1);
+  border-left: 4px solid var(--warning);
+  color: #9a7d0a;
+}
+
+.message-icon {
+  margin-right: var(--spacing-3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content.with-sidebar {
+    margin-left: 0;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+  
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
